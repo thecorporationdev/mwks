@@ -1,0 +1,66 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family : "STAPEL";
+    src : url("../public/STAPEL.otf");
+}
+@font-face {
+    font-family : "OPTIEN";
+    src : url("../public/OPTIEN.ttf");
+}
+.open{
+@apply h-0 overflow-hidden transition-all
+}
+.close{
+@apply h-full overflow-visible transition-all
+}
+
+.noShadow{
+@apply absolute inset-0 bg-gradient-to-b from-black/0 via-black/5 to-black/80 transition-all duration-300  ;
+ }
+.shadow{
+@apply  absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 transition-all  duration-300;
+}
+
+.scaleUp{
+@apply  h-full w-full object-cover rotate-3 scale-125 transition-transform duration-500
+}
+.noScaleUp{
+@apply h-full w-full object-cover transition-transform duration-500
+}
+.textUp{
+@apply absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-0 transition-all duration-500
+}
+.textDown{
+@apply absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[55%] transition-all duration-500
+}
+
+.textDowni{
+@apply absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[50%] transition-all duration-500
+}
+.textDownii{
+@apply absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[55%] transition-all duration-500
+}
+
+.textShow{
+@apply  text-sm text-white mb-3 opacity-100 transition-opacity duration-300
+}
+.textNoShow{
+@apply  text-sm text-white mb-3 opacity-0 transition-opacity duration-300
+}
+.anx{
+@apply transform rotate-45
+}
+.across{
+@apply transform rotate-0
+}
+.offscreen{
+@apply  absolute py-0  w-screen top-0 left-0 group-hover:py-10 bg-white  transition-all duration-300
+}
+.onscreen{
+@apply absolute py-10 w-screen top-0 left-0 bg-white  transition-all duration-300 
+}
